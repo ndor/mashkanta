@@ -29,7 +29,7 @@ def get_optimized_composition(monthly_rates_dictionary: dict,
                               max_first_payment_fraction: float,
                               equal_amortization=False) -> (dict, float):
     # principal_portions = {'fixed': 0.6, 'madad': 0.6, 'prime': 0.6}
-    if not all(list(map(lambda x: (type(x) is float) or (type(x) is np.float_), list(principal_portions.values())))):
+        if not all(list(map(lambda x: (type(x) is float) or (type(x) is np.float32) or (type(x) is np.float64) or (type(x) is np.float16), list(principal_portions.values())))):
         raise ValueError('>>> type(values) != float')
 
     sum_rates = sum(principal_portions.values())
