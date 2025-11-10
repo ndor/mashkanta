@@ -1,0 +1,58 @@
+What are the types of return tables?
+There are several amortization schedules for mortgages. The automatic tool (currently) refers to the following two:
+
+
+1. Spitzer Fund, in which:
+The monthly payment is uniform over the duration of the mortgage.
+The interest component (payment to the bank) decreases over the period.
+The repayment component on the principal (loan) increases.
+This combination allows for a (relatively) constant monthly payment.
+
+
+2. Equal principal, in which:
+The monthly payment decreases over the life of the mortgage.
+The interest component (payment to the bank) decreases over the period.
+The principal (loan) repayment component is fixed.
+This combination allows for a decreasing monthly payment.
+
+
+Personal details and their impact along with calculation assumptions
+Borrower assumptions:
+Based on mortgage restrictions.
+Minimum apartment: 100,000 NIS.
+Maximum apartment price: 100,000,000 NIS.
+Minimum repayment period: 60 months (5 years).
+Maximum repayment period: 360 months (30 years).
+Monthly repayment will not exceed 35% of total net income.
+Currently, this automatic tool does not take into account the borrower's age. The assumption is that the loan term is taken into account in the borrower's considerations.
+
+
+Lender's assumptions:
+Based on mortgage underwriting restrictions.
+The anchors of the mixes are linked to government bonds.
+The market spread depends on the financing percentage.
+The market spread depends on whether the borrower is a single or a couple.
+Maximum financing for a single apartment: 75%.
+Maximum financing for an additional apartment: 50%.
+Maximum portion of the prime amortization track: 66%.
+Minimum portion of fixed interest amortization tracks: 33%.
+The value of the prime interest is the amount of the Bank of Israel interest rate + 1.5%.
+<!--Current Bank of Israel interest rate.-->
+
+
+
+What are the types of interest rates and the differences between them?
+There are several types of mortgage interest rates. The automatic tool (currently) refers to the first three:
+1. Fixed interest rate (not index-linked):
+The interest rate is determined when the mortgage is raised and remains fixed for its entire duration.
+2. Fixed interest rate index-linked:
+The interest rate is determined when the mortgage is raised and remains fixed in relation to the consumer price index throughout its entire duration.
+3. Prime interest rate:
+The interest rate is determined when the mortgage is raised and remains fixed in relation to the Bank of Israel interest rate throughout its entire duration.
+4. Variable interest rate (not index-linked):
+The interest rate is determined when the mortgage is raised and is updated every few years throughout its entire duration. The period between updates is optional - usually once every 5 years.
+5. Index-linked variable interest rate (Madad):
+The interest rate is determined when the mortgage is raised and remains fixed in relation to the consumer price index, and is updated every few years throughout its life. The period between updates is optional - usually once every 5 years.
+It is likely that the interest rates found by the automatic tool could improve for the types of tracks taken into account in the calculation, if variable interest rate tracks are taken into account in your mortgage, since in these, the bank updates the interest rates each period to compensate for the market margin, if there is one from the previous period.
+Since there is a great deal of uncertainty about this interval in addition to the future uncertainty included in the model - taking variable tracks is not reasonable for reliable automatic calculation of tracks in the mix.
+

@@ -152,55 +152,59 @@ def waiver():
 
 
 def project_info():
+    # # if st.session_state['language_key'] == 'he':
+    # #     rtl_style = """
+    # #     <style>
+    # #     body, html {
+    # #         direction: RTL;
+    # #         unicode-bidi: bidi-override;
+    # #         text-align: right;
+    # #     }
+    # #     p, div, input, label, h1, h2, h3, h4, h5, h6 {
+    # #         direction: RTL;
+    # #         unicode-bidi: bidi-override;
+    # #         text-align: right;
+    # #     }
+    # #     </style>
+    # #     """
+    # # st.html(rtl_style)
+    # # #     # st.markdown(rtl_style, unsafe_allow_html=True)
+    # # # st.html(params.PARAMETER_LANG_MAP[st.session_state['language_key']]['info'][0])
+    # # # st.divider()
+    # # # st.html(params.PARAMETER_LANG_MAP[st.session_state['language_key']]['info'][1])
+    # # # st.divider()
+    # # # st.html(params.PARAMETER_LANG_MAP[st.session_state['language_key']]['info'][2])
     # if st.session_state['language_key'] == 'he':
-    #     rtl_style = """
-    #     <style>
-    #     body, html {
-    #         direction: RTL;
-    #         unicode-bidi: bidi-override;
-    #         text-align: right;
-    #     }
-    #     p, div, input, label, h1, h2, h3, h4, h5, h6 {
-    #         direction: RTL;
-    #         unicode-bidi: bidi-override;
-    #         text-align: right;
-    #     }
-    #     </style>
-    #     """
-    # st.html(rtl_style)
-    # #     # st.markdown(rtl_style, unsafe_allow_html=True)
-    # # st.html(params.PARAMETER_LANG_MAP[st.session_state['language_key']]['info'][0])
-    # # st.divider()
-    # # st.html(params.PARAMETER_LANG_MAP[st.session_state['language_key']]['info'][1])
-    # # st.divider()
-    # # st.html(params.PARAMETER_LANG_MAP[st.session_state['language_key']]['info'][2])
-    if st.session_state['language_key'] == 'he':
-        max_pad = max([max(list(map(len,
-                        params.PARAMETER_LANG_MAP[st.session_state['language_key']]['info'][k]['body'].split('\n'))))
-                       for k in params.PARAMETER_LANG_MAP[st.session_state['language_key']]['info'].keys()] +
-                      [max(list(map(len,
-                        params.PARAMETER_LANG_MAP[st.session_state['language_key']]['info'][k]['title'])))
-                       for k in params.PARAMETER_LANG_MAP[st.session_state['language_key']]['info'].keys()]
-                      )
-        for k in sorted(params.PARAMETER_LANG_MAP[st.session_state['language_key']]['info'].keys()):
-            title = params.PARAMETER_LANG_MAP[st.session_state['language_key']]['info'][k]['title']
-            ds = max_pad - len(title)
-            st.markdown(title.rjust(ds))
+    #     max_pad = max([max(list(map(len,
+    #                     params.PARAMETER_LANG_MAP[st.session_state['language_key']]['info'][k]['body'].split('\n'))))
+    #                    for k in params.PARAMETER_LANG_MAP[st.session_state['language_key']]['info'].keys()] +
+    #                   [max(list(map(len,
+    #                     params.PARAMETER_LANG_MAP[st.session_state['language_key']]['info'][k]['title'])))
+    #                    for k in params.PARAMETER_LANG_MAP[st.session_state['language_key']]['info'].keys()]
+    #                   )
+    #     for k in sorted(params.PARAMETER_LANG_MAP[st.session_state['language_key']]['info'].keys()):
+    #         title = params.PARAMETER_LANG_MAP[st.session_state['language_key']]['info'][k]['title']
+    #         ds = max_pad - len(title)
+    #         st.markdown(title.rjust(ds))
+    #
+    #         body = params.PARAMETER_LANG_MAP[st.session_state['language_key']]['info'][k]['body']
+    #         body_lines = body.split('\n')
+    #         b = ''
+    #         for line in body_lines:
+    #             line = line.strip()
+    #             ds = max_pad - len(line)
+    #             b += line.rjust(ds) + '\n'
+    #         st.text(b)
+    #         st.divider()
+    # else:
+    #     for k in sorted(params.PARAMETER_LANG_MAP[st.session_state['language_key']]['info'].keys()):
+    #         st.markdown(params.PARAMETER_LANG_MAP[st.session_state['language_key']]['info'][k]['title'])
+    #         st.text(params.PARAMETER_LANG_MAP[st.session_state['language_key']]['info'][k]['body'])
+    #         st.divider()
 
-            body = params.PARAMETER_LANG_MAP[st.session_state['language_key']]['info'][k]['body']
-            body_lines = body.split('\n')
-            b = ''
-            for line in body_lines:
-                line = line.strip()
-                ds = max_pad - len(line)
-                b += line.rjust(ds) + '\n'
-            st.text(b)
-            st.divider()
-    else:
-        for k in sorted(params.PARAMETER_LANG_MAP[st.session_state['language_key']]['info'].keys()):
-            st.markdown(params.PARAMETER_LANG_MAP[st.session_state['language_key']]['info'][k]['title'])
-            st.text(params.PARAMETER_LANG_MAP[st.session_state['language_key']]['info'][k]['body'])
-            st.divider()
+    for k in sorted(params.PARAMETER_LANG_MAP[st.session_state['language_key']]['info'].keys()):
+        st.image(params.PARAMETER_LANG_MAP[st.session_state['language_key']]['info'][k]['image'])
+        st.divider()
 
 
 def guide():

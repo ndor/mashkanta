@@ -252,7 +252,9 @@ PARAMETER_LANG_MAP = {
                     רכיב הריבית (התשלום לבנק) פוחת במהלך התקופה.
                     רכיב ההחזר על הקרן (ההלוואה) קבוע.
                     שילוב זה מאפשר תשלום חודשי פוחת.
-                '''},
+                ''',
+                'image': 'info/he_0.png',
+                },
             1: {'title': '##### פרטים אישיים והשפעתם יחד עם הנחות החישוב',
                 'body': '''
                     הנחות צד לווה:
@@ -276,7 +278,9 @@ PARAMETER_LANG_MAP = {
                     תכולה מינימלית של מסלולי ריבית קבועה : 33%.
                     ערכה של ריבית הפריים הוא סכום ריבית בנק-ישראל + 1.5%.
                     <!--ריבית בנק ישראל עדכנית.-->
-                '''},
+                ''',
+                'image': 'info/he_1.png',
+                },
             2: {'title': '##### מה סוגי הריביות וההבדלים ביניהן?',
                 'body': '''
                     ישנם מספר סוגי ריביות למשכנתאות. הכלי האוטומטי (כרגע) מתייחס לשלושת הראשונים:
@@ -292,7 +296,9 @@ PARAMETER_LANG_MAP = {
                     הריבית נקבעת בעת גיוס המשכנתא ונשארת קבועה ביחס למדד המחירים לצרכן, ומתעדכנת במשך חייה אחת לכמה שנים. התקופה שבין העדכונים ניתנת לבחירה - לרוב אחת ל 5 שנים.
                     סביר כי הריביות אשר ימצא הכלי האוטומטי יוכלו להשתפר עבור סוגי המסלולים הנלקחים בחשבון בחישוב, במקרה וילקחו במשכנתא שלכם, מסלולים בריבית משתנה (מ"צ ומל"צ), שכן באלו, הבנק מעדכן את הריביות בכל תקופה כדי לפצות על מרווח השוק באם יש כזה מהתקופה שתמה.
                     מאחר ויש אי וודאות רבה לגבי מרווח זה בנוסף לאי הוודאות העתידי הנכלל במודל - לקיחת מסלולים משתנים אינה סבירה עבור חישוב אוטומטי אמין של מסלולים בתמהיל.
-                '''},
+                ''',
+                'image': 'info/he_2.png',
+                },
             },
     },
 
@@ -388,7 +394,9 @@ PARAMETER_LANG_MAP = {
                     The interest component (payment to the bank) decreases over the period.
                     The principal (loan) repayment component is fixed.
                     This combination allows for a decreasing monthly payment.
-                '''},
+                ''',
+                'image': 'info/en_0.png',
+                },
             1: {'title': '##### Personal details and their impact along with calculation assumptions',
                 'body': '''
                     Borrower assumptions:
@@ -411,7 +419,9 @@ PARAMETER_LANG_MAP = {
                     Minimum portion of fixed interest amortization tracks: 33%.
                     The value of the prime interest is the amount of the Bank of Israel interest rate + 1.5%.
                     <!--Current Bank of Israel interest rate.-->
-                '''},
+                ''',
+                'image': 'info/en_1.png',
+                },
             2: {'title': '##### What are the types of interest rates and the differences between them?',
                 'body': '''
                     There are several types of mortgage interest rates. The automatic tool (currently) refers to the first three:
@@ -427,7 +437,9 @@ PARAMETER_LANG_MAP = {
                     The interest rate is determined when the mortgage is raised and remains fixed in relation to the consumer price index, and is updated every few years throughout its life. The period between updates is optional - usually once every 5 years.
                     It is likely that the interest rates found by the automatic tool could improve for the types of tracks taken into account in the calculation, if variable interest rate tracks are taken into account in your mortgage, since in these, the bank updates the interest rates each period to compensate for the market margin, if there is one from the previous period.
                     Since there is a great deal of uncertainty about this interval in addition to the future uncertainty included in the model - taking variable tracks is not reasonable for reliable automatic calculation of tracks in the mix.
-                '''},
+                ''',
+                'image': 'info/en_2.png',
+                },
             },
     },
 }
@@ -439,7 +451,7 @@ LANGS = {'עברית 🇮🇱': 'he', 'English 🇬🇧': 'en'}
 NUMERICAL_FORMAT = '%u'
 
 
-COLOR_DISCRETE_MAP = {0: '#6200ff', 1: '#ac78ff', 2: '#d7c0fc'}
+COLOR_DISCRETE_MAP = {0: '#4503fc', 1: '#855cf7', 2: '#c6b4fa'}
 
 
 EN2HEB_translation = {
