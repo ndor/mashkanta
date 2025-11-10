@@ -26,7 +26,7 @@ def payments(total_monthly_payments: dict, main_df: pd.DataFrame, language='he')
     for k in sorted(total_monthly_payments.keys()):
         if k == 'total':
             continue
-        arr = total_monthly_payments[k]['ipmt'] + total_monthly_payments[k]['ppmt']
+        arr = total_monthly_payments[k]['pmt']
         t = fix_k(k, main_df)
         if len(arr) < max_len_df:
             df[t] = np.pad(arr, (0, max_len_df - len(arr)), constant_values=0)
