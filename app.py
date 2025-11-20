@@ -225,6 +225,7 @@ def app():
 
     main, info, about = st.tabs(params.PARAMETER_LANG_MAP[st.session_state['language_key']]['tabs'])
     with main:
+        st.image('2.jpg')
         guide()
         set_amortizations()
         set_prime_portion()
