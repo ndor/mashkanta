@@ -40,6 +40,7 @@ hideTopBar = true
 # Default: "full"
 showErrorDetails = "full"
 
+
 # Change the visibility of items in the toolbar, options menu,
 # and settings dialog (top right of the app).
 # Allowed values:
@@ -52,16 +53,17 @@ showErrorDetails = "full"
 #                 Streamlit Community Cloud) or through st.set_page_config.
 #                 If there are no options left, hide the menu.
 # Default: "auto"
-toolbarMode = "viewer"
+#toolbarMode = "viewer"
+toolbarMode = "minimal"
 
 # Controls whether to display the default sidebar page navigation in a
 # multi-page app. This only applies when app's pages are defined by the
 # `pages/` directory.
 # Default: true
-showSidebarNavigation = true
+showSidebarNavigation = false
 
-#stDecoration = false
-#stStatusWidget = false
+stDecoration = false
+stStatusWidget = false
 
 
 
