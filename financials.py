@@ -33,7 +33,6 @@ def get_prime(initial_value=params.PRIME_INITIAL_VALUE,
                          np.arange(steady_ramp_months_duration))
     prime_2 = np.sin(2 * np.pi * np.arange(0, 30, 1 / 12) / wavewlwngthy) * amplitude + prime_1[-1]
     prime = np.concatenate([prime_0, prime_1, prime_2]).astype('float16')
-    prime[prime < 0.005] = 0.005
     return prime
 
 
@@ -88,6 +87,7 @@ def update_yearly_to_monthly_rates_with_risk(funding_rate: float, is_married_cou
     fixed_rate = fixed_rate * risk['fixed_yearly_added_risk_rate']
     madad_rate = monthly_changing_yearly_MADAD * risk['madad_yearly_added_risk_yearly_rate']
     prime_rate = (monthly_changing_yearly_PRIME + params.PRIME_ADDED_YEARLY_RATE) * risk['fixed_yearly_added_risk_rate']
+    prime_rate[prime_rate < 0.0005] = 0.0005
     return {'fixed_rate': yearly_rate_to_monthly(fixed_rate).astype('float16'),
             'madad_rate': yearly_rate_to_monthly(madad_rate).astype('float16'),
             'prime_rate': yearly_rate_to_monthly(prime_rate).astype('float16')}
