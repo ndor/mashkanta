@@ -18,7 +18,11 @@ import main
 langs = list(sorted(params.LANGS.keys()))
 
 
-st.set_page_config(layout='wide')
+st.set_page_config(
+    page_title='משכון / Mishkon',
+    page_icon='icon.ico',  # Path to your .ico file or an emoji
+    layout='wide'
+)
 
 
 def set_language():
