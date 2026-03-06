@@ -1,6 +1,6 @@
-altair<5
+# altair<5
 numpy
 scipy
 pandas
-streamlit
+streamlit>=1.20.0
 plotly
